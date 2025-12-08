@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artisan Menuisier – Solgat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Solgat - Artisan Menuisier</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <img src="banner.webp" alt="Bannière bois" class="hero-banner" />
+    <h2>Solgat, votre artisan menuisier de confiance</h2>
+    <p>Fabrication, rénovation, agencement et tous travaux.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Menuiserie sur mesure</li>
+      <li>Parquet, escaliers, charpente légère</li>
+      <li>Petits travaux et rénovations diverses</li>
+    </ul>
+  </section>
+
+  <section id="realisations">
+    <h2>Réalisations</h2>
+    <div class="gallery">
+      <div class="item"><img src="realisation1.png" alt="Réalisation 1" /></div>
+      <div class="item"><img src="realisation2.png" alt="Réalisation 2" /></div>
+      <div class="item"><img src="realisation3.png" alt="Réalisation 3" /></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email : contact@solgat.fr</p>
+    <p>Téléphone : 06 23 37 25 55</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Solgat.fr</p>
+  </footer>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Agrandissement">
+  </div>
+  <script>
+	const lightbox = document.getElementById("lightbox");
+	const lightboxImg = document.getElementById("lightbox-img");
+
+	document.querySelectorAll(".gallery img").forEach(img => {
+	img.addEventListener("click", () => {
+	  lightboxImg.src = img.src;
+	  lightbox.style.display = "flex";
+	});
+	});
+
+	// Fermer la lightbox en cliquant
+	lightbox.addEventListener("click", () => {
+	lightbox.style.display = "none";
+	});
+  </script>
+</body>
+</html>
