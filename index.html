@@ -1,74 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artisan Menuisier – Solgat</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Menuisier Artisan à Lyon – Menuiserie sur mesure & Rénovation</title>
+  <meta name="description" content="Artisan menuisier à Lyon spécialisé en fabrication sur mesure, agencement intérieur, escaliers, terrasses et rénovation. Devis gratuit.">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <header>
-    <h1>Solgat - Artisan Menuisier</h1>
+
+<header>
+  <div class="header-container">
+    <h1>Menuisier Artisan</h1>
     <nav>
       <a href="#services">Services</a>
       <a href="#realisations">Réalisations</a>
+      <a href="#equipe">Équipe</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <section id="hero">
-    <img src="banner.webp" alt="Bannière bois" class="hero-banner" />
-    <h2>Solgat, votre artisan menuisier de confiance</h2>
-    <p>Fabrication, rénovation, agencement et tous travaux.</p>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Menuiserie sur mesure</li>
-      <li>Parquet, escaliers, charpente légère</li>
-      <li>Petits travaux et rénovations diverses</li>
-    </ul>
-  </section>
-
-  <section id="realisations">
-    <h2>Réalisations</h2>
-    <div class="gallery">
-      <div class="item"><img src="realisation1.png" alt="Réalisation 1" /></div>
-      <div class="item"><img src="realisation2.png" alt="Réalisation 2" /></div>
-      <div class="item"><img src="realisation3.png" alt="Réalisation 3" /></div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email : contact@solgat.fr</p>
-    <p>Téléphone : 06 23 37 25 55</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Solgat.fr</p>
-  </footer>
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <img id="lightbox-img" src="" alt="Agrandissement">
   </div>
-  <script>
-	const lightbox = document.getElementById("lightbox");
-	const lightboxImg = document.getElementById("lightbox-img");
+</header>
 
-	document.querySelectorAll(".gallery img").forEach(img => {
-	img.addEventListener("click", () => {
-	  lightboxImg.src = img.src;
-	  lightbox.style.display = "flex";
-	});
-	});
+<!-- HERO -->
+<section id="hero">
+  <img src="banner.webp"
+       alt="Atelier de menuiserie avec artisan travaillant le bois">
+  <div class="hero-text">
+    <h2>Menuiserie sur mesure & Rénovation</h2>
+    <p>Fabrication • Agencement • Travaux tous corps d'état</p>
+      <div style="margin-top:30px;">
+        <a href="#contact" class="btn btn-primary">Demander un devis</a>
+        <a href="#realisations" class="btn btn-primary">Voir nos réalisations</a>
+      </div>
+  </div>
+</section>
 
-	// Fermer la lightbox en cliquant
-	lightbox.addEventListener("click", () => {
-	lightbox.style.display = "none";
-	});
-  </script>
+<!-- SERVICES -->
+<section id="services" class="reveal-left">
+  <h2>Nos Services</h2>
+  <p>Nous réalisons des projets personnalisés pour particuliers et professionnels à Lyon et ses alentours.</p>
+
+  <div class="services-list">
+    <div class="service">
+      <h3>Menuiserie intérieure</h3>
+      <p>Escaliers, meubles sur mesure, bibliothèques et rangements personnalisés.</p>
+    </div>
+    <div class="service">
+      <h3>Menuiserie extérieure</h3>
+      <p>Terrasses bois, pergolas, portes et fenêtres sur mesure.</p>
+    </div>
+    <div class="service">
+      <h3>Rénovation & Travaux</h3>
+      <p>Rénovation complète, petits travaux et aménagement intérieur.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REALISATIONS -->
+<section id="realisations" class="reveal-right">
+  <h2>Réalisations</h2>
+  <div class="gallery">
+    <img src="https://images.pexels.com/photos/3945589/pexels-photo-3945589.jpeg"
+         alt="Escalier en bois massif réalisé sur mesure">
+    <img src="https://images.pexels.com/photos/460801/pexels-photo-460801.jpeg"
+         alt="Terrasse en bois extérieur réalisée par artisan">
+    <img src="https://images.pexels.com/photos/2305001/pexels-photo-2305001.jpeg"
+         alt="Fabrication d'un meuble sur mesure en atelier">
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe" class="reveal-left">
+  <h2>Notre Équipe</h2>
+  <p>Une équipe passionnée et expérimentée au service de vos projets.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal-right">
+  <h2>Contact</h2>
+  <p>Email : contact@artisan.fr</p>
+  <p>Téléphone : 06 00 00 00 00</p>
+  <p>Zone d’intervention : Lyon et région Auvergne-Rhône-Alpes</p>
+</section>
+
+<footer>
+  <p>© 2026 Menuisier Artisan – Tous droits réservés</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Image agrandie">
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===== LIGHTBOX ===== */
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+  document.querySelectorAll(".gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("open");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("open");
+  });
+
+  //visual effect on scroll (translation)
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  reveals.forEach(reveal => {
+    observer.observe(reveal);
+  });
+
+  /* ===== SCROLLSPY ===== */
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+
+    //hero image
+    const heroImg = document.querySelector("#hero img");
+    const scrollY = window.scrollY;
+
+    if (heroImg) {
+      heroImg.style.transform = `translateY(${scrollY * 0.3}px)`;
+    }
+
+    // //reveal manager
+    // sections.forEach(section => {
+    //   const sectionTop = section.offsetTop - 100;
+    //   if (pageYOffset >= sectionTop) {
+    //     current = section.getAttribute("id");
+    //   }
+    // });
+    const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          observer.unobserve(entry.target); // animation une seule fois
+        }
+      });
+    },
+    { threshold: 1.6 } // déclenche plus tard
+  );
+
+  reveals.forEach(reveal => observer.observe(reveal));
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+//   window.addEventListener("scroll", function() {
+//   const header = document.querySelector("header");
+//   header.classList.toggle("scrolled", window.scrollY > 50);
+// });
+
+
+});
+</script>
+
 </body>
 </html>
